@@ -1,9 +1,10 @@
+import { GlobalStyles } from "./index.js"
 function App() {
-
   return (
-    <>
-    <span>Hola mundo</span>
-    </>
+    <div>
+<GlobalStyles />
+    </div>
+
   )
 }
 
