@@ -11,3 +11,10 @@ export * from './styles/breakpoints';
 export * from './styles/themes';
 export * from './styles/variables';
 export * from './utils/dataEstatica';
+export * from './components/templates/LoginTemplate';
+export * from './pages/Login';
+export * from './components/atomos/Title';
+export * from './components/organismos/formularios/inputText2'
+export * from './components/moleculas/Btnsave'
+export * from './components/atomos/Icono'
+export * from './components/atomos/Linea'

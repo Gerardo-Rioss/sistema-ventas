@@ -1,9 +1,10 @@
 import { Routes, Route } from "react-router-dom";
-import { Home } from "../index.js";
+import { Home, Login } from "../index.js";
 export function MyRoutes() {
     return (
             <Routes>
                 <Route path="/" element={<Home />} />
+                <Route path="/login" element={<Login />} />
             </Routes>
     )
 }

@@ -8,7 +8,7 @@ function App() {
   const { themeStyle } = useThemeStore();
   return (
     <ThemeProvider theme={themeStyle}>
-      <Container>
+      <Container className={sideBarOpen ? "active" : ""}>
         <GlobalStyles />
         <section className="contentSideBar">
           <Sidebar state={sideBarOpen} setState={()=>setSideBarOpen(!sideBarOpen)}  />
@@ -25,25 +25,25 @@ function App() {
 const Container = styled.main`
   display: grid;
   grid-template-columns: 1fr;
-  background-color: black;
-
+  transition: 0.1s ease-in-out;
+  
   .contentSideBar {
     display: none;
-    background-color: rgba(78,45,78,0.5);
   }
 
   .contentMenuAmbur {
     position: absolute;
-    background-color: rgba(13,241,215,0.5);
   }
 
   .contentRouters {
-    background-color: rgba(231,13,136,0.5);
     grid-column: 1;
     width: 100%;
   }
   @media ${Device.tablet} {
     grid-template-columns: 88px 1fr;
+    &.active {
+      grid-template-columns: 260px 1fr;
+    }
     .contentSideBar {
       display: initial;
     }
